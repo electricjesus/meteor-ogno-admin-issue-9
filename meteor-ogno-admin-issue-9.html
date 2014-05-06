@@ -1,0 +1,30 @@
+<head>
+  <title>meteor-ogno-admin-issue-9</title>
+</head>
+<body>
+</body>
+<template name="layout">
+<header>
+	<h1>Sample App</h1>
+	{{> loginButtons}}
+	<hr />
+
+</header>
+<div class="content">
+	{{> yield}}
+</div>
+</template>
+<template name="home">
+<h3>Awesome list of Cars</h3>
+<ul>
+	{{#each this}}
+	<li>{{name}}</li>
+	{{/each}}
+	{{#unless this}}
+	<li> No cars yet. </li>
+	{{/unless}}
+</ul>
+</template>
+<template name="notFound">
+Not found!
+</template>
